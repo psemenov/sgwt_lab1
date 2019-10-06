@@ -1,17 +1,13 @@
 public class Cosinus {
-    public static double cos(double val) {
+
+    public static double fact(double num) {
+        return (num <= 0) ? 1 : num * fact(num - 1);
+    }
+
+    public static double cos(double num) {
         double result = 0;
-        for(int n = 0; n < 7; n++) {
-            result += Math.pow(-1, n) * Math.pow(val, 2 * n) / factorial(2 * n);
-        }
+        for(int i = 0; i < 12; i++)
+            result += Math.pow(-1, i) * Math.pow(num, 2 * i) / fact(2 * i);
         return result;
     }
-
-    private static int factorial(int val) {
-        if(val <= 1)
-            return 1;
-        else
-            return val * (factorial(val - 1));
-    }
-
 }
