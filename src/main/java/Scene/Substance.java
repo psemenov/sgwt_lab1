@@ -1,3 +1,5 @@
+package Scene;
+
 public class Substance {
     private int size;
 

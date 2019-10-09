@@ -1,3 +1,5 @@
+package Scene;
+
 public class PrimaryLight {
     private boolean nausea;
     private int brigthness;

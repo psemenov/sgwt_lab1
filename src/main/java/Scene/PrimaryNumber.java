@@ -1,3 +1,5 @@
+package Scene;
+
 public class PrimaryNumber {
     private int value;
 

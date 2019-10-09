@@ -1,3 +1,5 @@
+package Scene;
+
 public class They {
     private boolean nausea;
     private String name;

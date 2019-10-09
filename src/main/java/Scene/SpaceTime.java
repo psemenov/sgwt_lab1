@@ -1,3 +1,5 @@
+package Scene;
+
 public class SpaceTime {
     private boolean splashed;
 

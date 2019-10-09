@@ -1,3 +1,5 @@
+package Scene;
+
 public class IllusoryUniverse extends Universe {
 
     private They they;

@@ -1,12 +1,14 @@
+package Scene;
+
 public class Scene {
-    RealUniverse realUniverse;
-    IllusoryUniverse illusoryUniverse;
-    They they;
-    PrimaryLight primaryLight;
-    SpaceTime spaceTime;
-    Time time;
-    GreatestPrimaryNumber greatestPrimaryNumber;
-    Substance substance;
+   private RealUniverse realUniverse;
+   private IllusoryUniverse illusoryUniverse;
+   private They they;
+   private PrimaryLight primaryLight;
+   private SpaceTime spaceTime;
+   private Time time;
+   private GreatestPrimaryNumber greatestPrimaryNumber;
+   private Substance substance;
 
     public void play(){
         realUniverse = new RealUniverse();
@@ -27,4 +29,9 @@ public class Scene {
         greatestPrimaryNumber.collapse();
         greatestPrimaryNumber.dissapear();
     }
+
+    public RealUniverse getRealUniverse(){
+        return realUniverse;
+    }
+
 }

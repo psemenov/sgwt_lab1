@@ -1,3 +1,5 @@
+package Scene;
+
 public class GreatestPrimaryNumber extends PrimaryNumber {
     private boolean collapsed;
 

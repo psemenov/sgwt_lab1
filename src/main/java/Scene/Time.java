@@ -1,3 +1,5 @@
+package Scene;
+
 public class Time {
     private boolean bloomed;
 
