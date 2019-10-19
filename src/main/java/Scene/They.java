@@ -5,7 +5,7 @@ public class They {
     private String name;
 
     public boolean isNausea() {
-        return nausea;
+        return this.nausea;
     }
 
     public void setNausea(boolean nausea) {
@@ -13,7 +13,7 @@ public class They {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
