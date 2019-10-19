@@ -10,4 +10,10 @@ public class GreatestPrimaryNumber extends PrimaryNumber {
     public void collapse(){
         this.collapsed = true;
     }
+
+    public boolean isCollapsed() {
+        return collapsed;
+    }
+
+
 }

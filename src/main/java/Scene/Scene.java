@@ -12,6 +12,7 @@ public class Scene {
 
     public void play(){
         realUniverse = new RealUniverse();
+        realUniverse.setName("RealUniverse");
         they = new They();
         realUniverse.bend_under(they);
         they.setNausea(true);

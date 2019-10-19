@@ -17,4 +17,11 @@ public class PrimaryLight {
         return spaceTime.isSplashed();
     }
 
+    public int getBrigthness() {
+        return brigthness;
+    }
+
+    public void setBrigthness(int brigthness) {
+        this.brigthness = brigthness;
+    }
 }

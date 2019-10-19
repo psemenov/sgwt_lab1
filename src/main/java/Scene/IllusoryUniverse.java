@@ -8,4 +8,12 @@ public class IllusoryUniverse extends Universe {
         this.they = they;
         return true;
     }
+
+    public They getThey() {
+        return they;
+    }
+
+    public void setThey(They they) {
+        this.they = they;
+    }
 }
