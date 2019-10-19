@@ -1,9 +1,9 @@
 package Scene;
 
 public class GreatestPrimaryNumber extends PrimaryNumber {
-    private boolean collapsed;
+    private boolean collapsed = false;
 
-    public void dissapear(){
+    public void disappear(){
         this.setValue(0);
     }
 

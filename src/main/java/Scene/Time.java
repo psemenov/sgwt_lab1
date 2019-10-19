@@ -1,7 +1,7 @@
 package Scene;
 
 public class Time {
-    private boolean bloomed;
+    private boolean bloomed = false;
 
     public boolean bloom(){
         return this.bloomed = true;
@@ -11,7 +11,4 @@ public class Time {
         return bloomed;
     }
 
-    public void setBloomed(boolean bloomed) {
-        this.bloomed = bloomed;
-    }
 }

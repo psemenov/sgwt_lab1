@@ -28,7 +28,7 @@ public class Scene {
         substance.setSize(0);
         greatestPrimaryNumber = new GreatestPrimaryNumber();
         greatestPrimaryNumber.collapse();
-        greatestPrimaryNumber.dissapear();
+        greatestPrimaryNumber.disappear();
     }
 
     public RealUniverse getRealUniverse(){

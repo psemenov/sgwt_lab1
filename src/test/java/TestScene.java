@@ -15,6 +15,7 @@ public class TestScene {
     private Substance substance;
     private GreatestPrimaryNumber greatestPrimaryNumber;
 
+//  Setting up scene
     @Before
     public void setUp(){
         realUniverse = new RealUniverse();
@@ -38,7 +39,7 @@ public class TestScene {
     @Test
     public void universe_Bend() {
 //        выгнулась под ними
-        realUniverse.setName("RealUniverse");
+        realUniverse.setName(realUniverse.getClass().getSimpleName());
         realUniverse.bend_under(they);
         assertEquals("RealUniverse" , they.getName());
     }
@@ -46,6 +47,7 @@ public class TestScene {
     @Test
     public void nausea_Left() {
 //        оставив ощущение тошноты
+        assertFalse(they.isNausea());
         realUniverse.set_nausea(they);
         assertTrue(they.isNausea());
     }
@@ -72,6 +74,8 @@ public class TestScene {
     @Test
     public void primaryLight_Flashed() {
 //        Вспыхнул Первичный свет
+        primaryLight.setShining(true);
+        assertTrue(primaryLight.isShining());
         primaryLight.addBrigthness(9999);
         assertEquals(9999 , primaryLight.getBrigthness());
     }
@@ -79,13 +83,15 @@ public class TestScene {
     @Test
     public void spaceTime_Splashed() {
 //        расплескав пространство-время, как сметану.
-        spaceTime.setSplashed(true);
+        assertFalse(spaceTime.isSplashed());
+        primaryLight.splash(spaceTime);
         assertTrue(spaceTime.isSplashed());
     }
 
     @Test
     public void time_Bloomed() {
 //        Время расцвело пышным цветом
+        assertFalse(time.isBloomed());
         time.bloom();
         assertTrue(time.isBloomed());
     }
@@ -93,6 +99,7 @@ public class TestScene {
     @Test
     public void substance_Shrink() {
 //        а материя сжалась в ничто
+        assertTrue(substance.getSize() > 0);
         substance.setSize(0);
         assertEquals(0 , substance.getSize());
     }
@@ -107,7 +114,7 @@ public class TestScene {
     @Test
     public void greatestPrimaryNumber_Disappeared() {
 //            и исчезло навсегда
-        greatestPrimaryNumber.dissapear();
+        greatestPrimaryNumber.disappear();
         assertEquals(0 , greatestPrimaryNumber.getValue() );
     }
 

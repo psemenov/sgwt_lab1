@@ -1,7 +1,7 @@
 package Scene;
 
 public class They {
-    private boolean nausea;
+    private boolean nausea = false;
     private String name;
 
     public boolean isNausea() {
