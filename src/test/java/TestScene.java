@@ -76,8 +76,8 @@ public class TestScene {
 //        Вспыхнул Первичный свет
         primaryLight.setShining(true);
         assertTrue(primaryLight.isShining());
-        primaryLight.addBrigthness(9999);
-        assertEquals(9999 , primaryLight.getBrigthness());
+        primaryLight.addBrightness(9999);
+        assertEquals(9999 , primaryLight.getBrightness());
     }
 
     @Test

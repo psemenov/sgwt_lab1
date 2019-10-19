@@ -1,11 +1,11 @@
 package Scene;
 
 public class PrimaryLight {
-    private int brigthness;
+    private int brightness;
     private boolean isShining;
 
-    public void addBrigthness(int lumens){
-        this.brigthness += lumens;
+    public void addBrightness(int lumens){
+        this.brightness += lumens;
     }
 
     public boolean splash(SpaceTime spaceTime){
@@ -13,8 +13,8 @@ public class PrimaryLight {
         return spaceTime.isSplashed();
     }
 
-    public int getBrigthness() {
-        return brigthness;
+    public int getBrightness() {
+        return brightness;
     }
 
     public boolean isShining() {

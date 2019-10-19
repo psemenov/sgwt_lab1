@@ -8,6 +8,6 @@ public class SpaceTime {
     }
 
     public void setSplashed(boolean splashed) {
-        this.splashed = true;
+        this.splashed = splashed;
     }
 }
