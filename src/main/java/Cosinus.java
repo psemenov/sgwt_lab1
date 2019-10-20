@@ -6,7 +6,7 @@ public class Cosinus {
 
     public static double cos(double num) {
         double result = 0;
-        for(int i = 0; i < 12; i++)
+        for(int i = 0; i < 7; i++)
             result += Math.pow(-1, i) * Math.pow(num, 2 * i) / fact(2 * i);
         return result;
     }
