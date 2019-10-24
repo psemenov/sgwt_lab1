@@ -60,4 +60,74 @@ public class CosinesTest extends Assert {
             assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
     }
 
+    @Test
+    public void testMinusTwoPi() {
+        double x = -2*Math.PI;
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+    @Test
+    public void testMinusThreeSecondsPi() {
+        double x = -3*Math.PI/2;
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+    @Test
+    public void testMinusPi() {
+        double x = -Math.PI;
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+    @Test
+    public void testMinusHalfOfPi() {
+        double x = -Math.PI/2;
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+    @Test
+    public void testZero() {
+        double x = 0;
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+    @Test
+    public void testHalfOfPi() {
+        double x = Math.PI/2;
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+    @Test
+    public void testThreeSecondsPi() {
+        double x = 3*Math.PI/2;
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+    @Test
+    public void testTwoPi() {
+        double x = 2*Math.PI;
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+    @Test
+    public void testPositiveInfinity() {
+        double x = Double.POSITIVE_INFINITY;
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+    @Test
+    public void testNegativeInfinity() {
+        double x = Double.NEGATIVE_INFINITY;
+        System.out.println(x);
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+    @Test
+    public void testRandom() {
+        double x = Math.random() * Math.abs(Math.random() * 10);
+        System.out.println(x);
+        assertEquals(Math.cos(x), Cosines.cos(x), DELTA);
+    }
+
+
+
 }

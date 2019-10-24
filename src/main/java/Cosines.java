@@ -1,3 +1,4 @@
+
 public class Cosines {
 
     public static double fact(double num) {
@@ -5,9 +6,12 @@ public class Cosines {
     }
 
     public static double cos(double num) {
-        double result = 0;
-        for(int i = 0; i < 9; i++)
-            result += Math.pow(-1, i) * Math.pow(num, 2 * i) / fact(2 * i);
+        double result = 0, term;
+        for (int i = 0; i < 8; i++) {
+            term = Math.pow(-1, i) * Math.pow(num, 2 * i) / fact(2 * i);
+            result += term;
+        }
         return result;
     }
+
 }
