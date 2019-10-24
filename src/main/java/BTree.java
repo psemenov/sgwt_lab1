@@ -4,6 +4,7 @@ public class BTree  {
     private Node root;       // root of the B-tree
     public int height;      // height of the B-tree
     private int n;           // number of key-value pairs in the B-tree
+    StringBuilder log = new StringBuilder();
 
     private static final class Node {
         private int m;                             // number of 3
@@ -62,6 +63,8 @@ public class BTree  {
     }
 
     public void put(int key) {
+        if(log.length() > 0) log.delete(0, log.length() - 1);
+        log.append("Inserting value: " + key + "\n");
         Node u = insert(root, key, height);
         n++;
         if (u == null) return;
@@ -77,6 +80,7 @@ public class BTree  {
     public Node insert(Node h, int key, int ht) {
         int j;
         Key t = new Key(key, null);
+        log.append("Current node: h" + ht + " "+  key + "\n");
 
         if (ht == 0) {
             for (j = 0; j < h.m; j++) {
@@ -104,6 +108,7 @@ public class BTree  {
     }
 
     public Node split(Node h) {
+        log.append("Splitting node\n");
         Node t = new Node(M/2);
         h.m = M/2;
         for (int j = 0; j < M/2; j++)
@@ -133,7 +138,7 @@ public class BTree  {
         return s.toString();
     }
 
-    
+
     public static void main(String[] args) {
         BTree st = new BTree();
 

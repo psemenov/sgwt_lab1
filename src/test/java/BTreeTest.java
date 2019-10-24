@@ -7,6 +7,7 @@ public class BTreeTest {
     private BTree bt;
     private int[] inputValues;// = new int[]{1, 2, 3, 4, 5};
     private String[] logs;
+    private String[] logs2;
     private String[] expectedOutput;// = new String[inputValues.length];
     private int expectedTreeHeight;
 
@@ -26,12 +27,15 @@ public class BTreeTest {
         };
 
         logs = new String[inputValues.length];
+        logs2 = new String[inputValues.length * 10];
         expectedTreeHeight = 2;
 
         bt = new BTree();
         for (int i = 0; i < inputValues.length; i++) {
             bt.put(inputValues[i]);
+            logs2[i] = bt.log.toString();
             logs[i] = bt.outputLog();
+
         }
     }
 
@@ -40,6 +44,7 @@ public class BTreeTest {
 
         for (int i = 0; i < inputValues.length; i++) {
             System.out.println("Step: " + (i+1) + ", value: " + inputValues[i]);
+            System.out.println(logs2[i]);
             System.out.println("Expected tree state: " + expectedOutput[i]);
             System.out.println("Actual tree state: " + logs[i]);
             System.out.println();
